@@ -43,6 +43,8 @@
     <configure name="RADIO_CONTROL_LED" value="2"/>
     <configure name="GPS_LED" value="3"/>
 
+    <define name="USE_I2C0"/>
+
   </firmware>
 
   <servos>	<!-- defines the physical servos connected to the TWOG. ideally: min=1000 neutral=1500 max=2000-->
@@ -180,6 +182,11 @@
     <load name="ins_chimu_spi.xml" >
     <!-- <define name="CHIMU_BIG_ENDIAN" /> Use this with the older CHIMU-->
     </load>
+
+    <load name="airspeed_ets.xml">
+      <define name="SENSOR_SYNC_SEND"/>
+    </load>
+
   </modules>
 
 </airframe>
