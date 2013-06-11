@@ -16,6 +16,7 @@
       <define name="LOITER_TRIM"/>
       <define name="ALT_KALMAN"/>
       <subsystem name="spi_slave_hs"/>       <!-- Needed for CHIMU -->
+      <define name="SENSOR_SYNC_SEND"/>
     </target>
 
     <target name="sim" board="pc">
@@ -183,9 +184,8 @@
     <!-- <define name="CHIMU_BIG_ENDIAN" /> Use this with the older CHIMU-->
     </load>
 
-    <load name="airspeed_ets.xml">
-      <define name="SENSOR_SYNC_SEND"/>
-    </load>
+    <load name="airspeed_ets.xml"/>
+
 
   </modules>
 
